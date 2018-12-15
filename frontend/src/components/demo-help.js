@@ -23,7 +23,7 @@ function shouldDelayForImg() {
 export const demo_delayImport = (cb, timeoutInMs = 1500) =>
   shouldDelayDynamicImport() ? new Promise(resolve => setTimeout(() => resolve(cb()), timeoutInMs)) : cb();
 
-export const demo_delayFetch = cb =>
+export const demo_delayFetch = (cb, timeoutInMs = 125) =>
   shouldDelayForFetch()
-    ? new Promise(resolve => setTimeout(() => resolve(cb()), (Math.floor(Math.random() * 4) + 2) * 125))
+    ? new Promise(resolve => setTimeout(() => resolve(cb()), (Math.floor(Math.random() * 4) + 2) * timeoutInMs))
     : cb();
