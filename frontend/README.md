@@ -1,28 +1,13 @@
-# TypeScript Chat Client React
+# React Hooks and Suspense Demo (Live Coding) Playground
 
-* **This is a fork of [Luis Aviles'](https://luixaviles.com/) Socket.IO/TypeScript/Angular example, that you can find [on Github](https://github.com/luixaviles/socket-io-typescript-chat).**
+Zeigen:
 
-* **Work in progress!**
+0. Zeigen der Anwendung
 
-## Run the React frontend
+1. setState Hook am SearchInput demonstrieren
 
-First, please make sure, that the **backend is running** (see README.md in top-level folder).
+2. setState und useEffect an PersonSearch und CompanySearch demonstrieren
 
-Then run the following commands in this `client-react` folder from the terminal:
+3. useEffect und setState durch Suspense und React Caching ersetzen (TODO: Resourcen vorbereiten)
 
-```bash
-yarn install
-yarn start
-```
-
-The React-based frontend then runs on http://localhost:4300
-
-Note: of course you can run the original Angular frontend as well. Then you can happily chat between React and Angular 😊
-
-## Tech Stack
-
-This frontend uses:
-
-* [React 16.2](https://reactjs.org/)
-* [TypeScript 2.7-rc](https://blogs.msdn.microsoft.com/typescript/2018/01/17/announcing-typescript-2-7-rc/)
-* [material-ui](https://material-ui-next.com/)
+4. Durch Verschieben der React.Suspense Komponente können wir steuern, wo Loading Indikatoren angezeigt werden
