@@ -4,25 +4,15 @@ export default class SearchField extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.initialValue
+      inputValue: props.initialValue
     };
   }
 
   onKeyDown(e) {
     const keyCode = e.which || e.keyCode;
     if (keyCode === 13) {
-      this.onButtonClick();
+      this.props.onSearch(this.state.inputValue);
     }
-  }
-
-  onButtonClick() {
-    this.props.onButtonClick(this.state.value);
-  }
-
-  onSearchChange(newValue) {
-    this.setState({
-      value: newValue
-    });
   }
 
   render() {
@@ -30,11 +20,15 @@ export default class SearchField extends React.Component {
       <div className="InputField">
         <input
           type="text"
-          value={this.state.value}
-          onChange={e => this.onSearchChange(e.target.value)}
+          value={this.state.inputValue}
+          onChange={e =>
+            this.setState({
+              inputValue: e.target.value
+            })
+          }
           onKeyDown={e => this.onKeyDown(e)}
         />
-        <button onClick={() => this.onButtonClick()}>Search</button>
+        <button onClick={() => this.props.onSearch(this.state.inputValue)}>Search</button>
       </div>
     );
   }
