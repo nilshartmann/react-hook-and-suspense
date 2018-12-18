@@ -11,6 +11,14 @@ Zeigen:
 2c. useSearch-Hook in PersonSearch einbauen
 
 3. Still a Problem: Loading indicator...
-3a. useEffect und setState durch Suspense und React Caching ersetzen (TODO: Resourcen vorbereiten)
+
+Weitermachen in `search_suspense`, Code nur zeigen, aber nicht schreiben
+
+3a. useEffect und setState durch Suspense und React Caching ersetzen
+
+```
+PersonsResource.read(props.searchPhrase)
+CompaniesResource.read(props.searchPhrase);
+```
 
 4. Durch Verschieben der React.Suspense Komponente können wir steuern, wo Loading Indikatoren angezeigt werden
