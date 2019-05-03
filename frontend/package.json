@@ -12,6 +12,7 @@
 	},
 	"dependencies": {
 		"react": "^16.8.6",
+		"react-cache": "file:react-cache-2.0.0-alpha.0.tgz",
 		"react-dom": "^16.8.6"
 	},
 	"devDependencies": {
