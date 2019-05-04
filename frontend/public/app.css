@@ -1,146 +1,169 @@
 :root {
-	--color-one: #4b76b9;
-	--color-one-light: #e4eaf5;
-	--color-primary: #ff7930;
-	--color-primary-light: #ffefe6;
-	--color-white: #ffffff;
+  --color-one: #4b76b9;
+  --color-one-light: #e4eaf5;
+  --color-primary: #ff7930;
+  --color-primary-light: #ffefe6;
+  --color-white: #ffffff;
 
-	--font-one: "Source Sans Pro", sans-serif;
-	--font-two: Arial, sans-serif;
+  --font-one: "Source Sans Pro", sans-serif;
+  --font-two: Arial, sans-serif;
 }
 
 body {
-	color: var(--color-white);
-	font-family: var(--font-one), sans-serif;
-	background-color: var(--color-white);
+  color: var(--color-white);
+  font-family: var(--font-one), sans-serif;
+  background-color: var(--color-white);
 
-	height: 100vh;
+  height: 100vh;
 }
 
 #mount {
-	margin: 0 auto;
-	width: 1024px;
-	max-width: 1024px;
-	min-height: 100%;
-	background-color: var(--color-one);
-	display: grid;
-
-	border-bottom: 9px solid var(--color-primary);
+  margin: 0 auto;
+  width: 1024px;
+  max-width: 1024px;
+  min-height: 100%;
+  background-color: var(--color-one);
 }
 
 main {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 
-	padding: 3rem 0rem;
+  padding: 3rem 0rem;
+}
+
+footer,
+header {
+  height: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  width: 100%;
+  max-width: 1024px;
+
+  text-align: center;
+  letter-spacing: 1px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+header a,
+footer a {
+  color: var(--color-white);
 }
 
 button {
-	background-color: var(--color-primary);
-	color: var(--color-white);
-	/* box-shadow: 2px 2px 2px 0px rgb(0, 0, 0, 0.16); */
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  /* box-shadow: 2px 2px 2px 0px rgb(0, 0, 0, 0.16); */
 
-	/* font-weight: bold; */
+  /* font-weight: bold; */
 
-	padding: 0 2rem;
-	border: none;
-	cursor: pointer;
-	outline: none;
+  padding: 0 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 button:hover,
 button:active,
 button:focus {
-	outline: none;
+  outline: none;
 }
 
 button:hover {
-	background-color: #ffc8a9;
+  background-color: #ffc8a9;
 }
 
 input {
-	border: none;
-	border-bottom: 1px solid red;
-	background-color: var(--color-white);
-	color: var(--color-primary);
+  border: none;
+  border-bottom: 1px solid red;
+  background-color: var(--color-white);
+  color: var(--color-primary);
 
-	padding: 0 0.5rem;
+  padding: 0 0.5rem;
 
-	outline: none;
-	width: 100%;
+  outline: none;
+  width: 100%;
 }
 
 input:focus,
 input:active,
 input:hover {
-	background-color: var(--color-primary-light);
+  background-color: var(--color-primary-light);
 }
 
 .InputField {
-	width: 50%;
-	margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
 
-	display: flex;
-	height: 2rem;
+  display: flex;
+  height: 2rem;
 }
 
 .SearchResults {
-	margin-top: 3rem;
-	margin-left: 3.75rem;
-	margin-right: 3.75rem;
-	display: flex;
+  margin-top: 3rem;
+  margin-left: 3.75rem;
+  margin-right: 3.75rem;
+  display: flex;
 }
 
 .SearchResult {
-	background-color: var(--color-white);
-	flex-grow: 1;
-	border: 1px solid gray;
-	border-bottom: 5px solid var(--color-primary);
-	margin: 0 1.2rem;
-	padding-bottom: 1rem;
+  background-color: var(--color-white);
+  flex-grow: 1;
+  border: 1px solid gray;
+  border-bottom: 5px solid var(--color-primary);
+  margin: 0 1.2rem;
+  padding-bottom: 1rem;
 }
 
 .SearchResult h2 {
-	width: 100%;
-	background-color: var(--color-primary-light);
-	color: var(--color-primary);
-	font-size: 1.25rem;
-	font-weight: normal;
-	padding: 0.2rem 1rem;
+  width: 100%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding: 0.2rem 1rem;
 }
 
 .SearchResult ul {
-	padding: 0 1rem 0;
-	list-style-type: none;
-	font-weight: 300;
+  padding: 0 1rem 0;
+  list-style-type: none;
+  font-weight: 300;
 }
 
 .SearchResult li {
-	color: var(--color-one);
-	list-style-type: none;
-	padding-bottom: 0.2rem;
+  color: var(--color-one);
+  list-style-type: none;
+  padding-bottom: 0.2rem;
 }
 
 .SearchResult .ResultTable {
-	margin-top: 1rem;
-	padding: 0 1rem 0;
-	font-weight: 300;
+  margin-top: 1rem;
+  padding: 0 1rem 0;
+  font-weight: 300;
 }
 .SearchResult table {
-	color: var(--color-one);
-	/* background-color: var(--color-one-light); */
-	width: 100%;
+  color: var(--color-one);
+  /* background-color: var(--color-one-light); */
+  width: 100%;
 
-	border-collapse: collapse;
+  border-collapse: collapse;
 }
 .SearchResult td {
-	color: var(--color-one);
-	background-color: var(--color-one-light);
+  color: var(--color-one);
+  background-color: var(--color-one-light);
 
-	border-right: 1px solid var(--color-white);
-	border-bottom: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
 
-	padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 /* --------------------------------------------------------------------------------------------------------- */
@@ -149,60 +172,60 @@ input:hover {
 /* taken from: http://tobiasahlin.com/spinkit/ */
 
 .Spinner {
-	margin: auto 0;
-	width: 100%;
-	text-align: center;
-	padding: 2rem;
+  margin: auto 0;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
 }
 
 .Spinner h1 {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .Spinner > .bounce {
-	width: 12px;
-	height: 12px;
-	margin-right: 5px;
-	background-color: var(--color-white);
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  background-color: var(--color-white);
 
-	border-radius: 100%;
-	display: inline-block;
-	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
 .Spinner .bounce1 {
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
 }
 
 .Spinner .bounce2 {
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 }
 
 @-webkit-keyframes sk-bouncedelay {
-	0%,
-	80%,
-	100% {
-		-webkit-transform: scale(0);
-	}
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
 
-	40% {
-		-webkit-transform: scale(1);
-	}
+  40% {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes sk-bouncedelay {
-	0%,
-	80%,
-	100% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
 
-	40% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

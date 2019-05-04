@@ -2,7 +2,13 @@ import React from "react";
 import LoadingPage from "./components/LoadingPage";
 import { demo_delayImport } from "./components/demo-help";
 
-const SearchPage = React.lazy(() => demo_delayImport(() => import(/* webpackChunkName: "SearchPage" */ "./search/SearchPage")));
+const SearchPage = React.lazy(
+  //
+  () =>
+    demo_delayImport(
+      () => import(/* webpackChunkName: "SearchPage" */ "./search/SearchPage") //
+    )
+);
 
 export function App() {
   return (
