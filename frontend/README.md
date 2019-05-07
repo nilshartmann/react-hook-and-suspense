@@ -16,9 +16,9 @@ Zeigen:
 
 3. useEffect in CompanySearch
 
-4. Code-Splitting mit Supsense (umstellen in mainJS)
+4. Code-Splitting mit Supsense (umstellen in mainJS auf AppWithTab)
 
-5. Ausblick: Data-Loading mit Supsense (in LazyApp.js import umstellen)
+5. Ausblick: Data-Loading mit Supsense (in Lamain import auf AppWithTabWithSuspense umstellen)
 
 ```
 PersonsResource.read(props.searchPhrase)

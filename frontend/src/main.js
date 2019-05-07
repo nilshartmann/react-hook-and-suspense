@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
 // import { AppWithTab as App } from "./LazyApp";
+// import { AppWithTabWithSuspense as App } from "./LazyAppWithSupsense";
 import ErrorHandler from "./components/ErrorHandler";
 
 const mountNode = document.getElementById("mount");
