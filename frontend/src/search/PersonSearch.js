@@ -1,6 +1,6 @@
 import React from "react";
 import { Spinner } from "../components";
-import { demo_delayFetch } from "../components/demo-help";
+import { demo_fetch } from "../components/demo-help";
 
 export default class PersonSearch extends React.Component {
   componentDidMount() {
@@ -16,11 +16,9 @@ export default class PersonSearch extends React.Component {
   async doSearch(searchPhrase) {
     this.setState({ persons: null });
 
-    demo_delayFetch(async () => {
-      const res = await fetch(`http://localhost:9010/api/persons?search=${searchPhrase}`);
-      const persons = await res.json();
-      this.setState({ persons });
-    });
+    const res = await demo_fetch(`http://localhost:9010/api/persons?search=${searchPhrase}`);
+    const persons = await res.json();
+    this.setState({ persons });
   }
 
   render() {

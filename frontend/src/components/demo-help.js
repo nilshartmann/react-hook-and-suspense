@@ -38,3 +38,13 @@ export const demo_delayFetch = (cb, timeoutInMs = 125) =>
   shouldDelayForFetch()
     ? new Promise(resolve => setTimeout(() => resolve(cb()), (Math.floor(Math.random() * 4) + 2) * timeoutInMs))
     : cb();
+
+export function demo_fetch(url, timeoutInMs = 125) {
+  return shouldDelayForFetch()
+    ? new Promise(resolve =>
+        setTimeout(() => {
+          return fetch(url).then(resolve);
+        }, (Math.floor(Math.random() * 4) + 2) * timeoutInMs)
+      )
+    : fetch(url);
+}
