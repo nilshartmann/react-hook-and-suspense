@@ -4,21 +4,23 @@ Zeigen:
 
 0. Zeigen der Anwendung
 
+0a. Mögliche Probleme bisher:
+
+- this-Binding
+- Logik verteilt:
+  - auf unterschiedliche Komponenten (CompSearch + PersonSearch)
+  - in unterschiedliche Lifecycle-Methoden verteilt (ComponentSearch)
+
 1. setState Hook am SearchInput demonstrieren
+2. useInput erzeugen
 
-2a. setState und useEffect an CompanySearch demonstrieren
-2b. useSearch-Hook extrahieren
-2c. useSearch-Hook in PersonSearch einbauen
+3. useEffect in CompanySearch
 
-3. Still a Problem: Loading indicator...
+4. Code-Splitting mit Supsense (umstellen in mainJS)
 
-Weitermachen in `search_suspense`, Code nur zeigen, aber nicht schreiben
-
-3a. useEffect und setState durch Suspense und React Caching ersetzen
+5. Ausblick: Data-Loading mit Supsense (in LazyApp.js import umstellen)
 
 ```
 PersonsResource.read(props.searchPhrase)
 CompaniesResource.read(props.searchPhrase);
 ```
-
-4. Durch Verschieben der React.Suspense Komponente können wir steuern, wo Loading Indikatoren angezeigt werden

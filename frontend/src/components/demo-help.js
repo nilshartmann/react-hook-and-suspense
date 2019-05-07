@@ -1,3 +1,14 @@
+import React from "react";
+export function React_lazy(fn) {
+  return React.lazy(
+    //
+    () =>
+      demo_delayImport(
+        fn //
+      )
+  );
+}
+
 function shouldDelayDynamicImport() {
   const urlParams = new URLSearchParams(window.location.search);
   const delay = urlParams.get("delayimport");
