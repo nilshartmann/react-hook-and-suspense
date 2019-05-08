@@ -1,6 +1,6 @@
 import React from "react";
 import { Spinner } from "../components";
-import { useFetch } from "./CompanySearch";
+import useFetch from "./useFetch";
 
 export default function PSearch(props) {
   const persons = useFetch(`http://localhost:9010/api/persons?search=${props.searchPhrase}`);
